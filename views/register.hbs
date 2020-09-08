@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Register Here</h5>
+                    {{#if error}}
+                        <div class="alert alert-danger" role="alert">
+                            <p id="error">{{error}}</p>
+                        </div>
+                    {{/if}}
+                    <form class="form-signin" id="form-signin" action="/register" method="post">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">Username</span>
+                                </div>
+                            <input type="username" name="usernameRegister" class="form-control" placeholder="Username" required autofocus>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">Email</span>
+                                </div>
+                            <input type="email" name="emailRegister" class="form-control" placeholder="Email address" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">Password</span>
+                                </div>
+                            <input type="password" name="passwordRegister" class="form-control" placeholder="Password" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">Confirm Password</span>
+                                </div>
+                            <input type="password" name="confirmPasswordRegister" class="form-control" placeholder="Confirm Password" required>
+                            </div>
+                        </div>
+
+                        <hr class="my-4"> 
+                        
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register Here</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

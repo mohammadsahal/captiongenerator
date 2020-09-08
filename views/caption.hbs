@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h2 class="card-title text-center">Add Caption</h2>
+                    {{#if error}}
+                        <div class="alert alert-danger" role="alert">
+                            <p id="messageDiv">{{error}}</p>
+                        </div>
+                    {{/if}}
+                    {{#if message}}
+                        <div class="alert alert-success" role="alert">
+                            <p id="messageDiv">{{message}}</p>
+                        </div>
+                    {{/if}}
+                    <form action="/caption" method="post">
+                        <div class="form-group">
+                            <textarea type="caption" name="caption" class="form-control" placeholder="Add Caption" required autofocus></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">#</span>
+                                </div>
+                                <input type="text" name="hashtagOne" class="form-control" placeholder="Add hashtag" required>
+                                <div class="invalid-feedback">
+                                    Required
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">#</span>
+                                </div>
+                                <input type="text" name="hashtagTwo" class="form-control" placeholder="Add hashtag">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="inputGroupPrepend3">#</span>
+                                </div>
+                                <input type="text" name="hashtagThree" class="form-control" placeholder="Add hashtag">
+                            </div>
+                        </div>
+                        <hr class="my-4">        
+                        <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Add Caption</button>
+                
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

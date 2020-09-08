@@ -1,0 +1,6 @@
+#Removing node modules
+node_modules
+
+#Removing firebase json file
+CaptionGenerator.json
+FirebaseConfig.json

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body text-center">
+                    <h1 class=" text-center">Image</h1>
+                    <img src="{{image}}" alt="Your image here" class="center" style="width: 50%; height: 20%;">
+                </div>   
+            </div>
+        </div> 
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Hastags</h5>
+                    {{#each hashtags as |hashtag|}}
+                        <p>#{{hashtag}}</p>
+                    {{/each}}
+                    <h5 class="card-title text-center">Captions</h5>
+                    {{#each captions as |caption|}}
+                        <p>{{caption}}</p>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
